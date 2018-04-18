@@ -11,10 +11,10 @@ class App extends Component {
   }
 
   getCars() {
-    axios.get('https://joes-autos.herokuapp.com/api/vehicles')
-    .then(res => {
+    axios.get('https://joes-autos.herokuapp.com/api/vehicles').then(res => {
+      console.log(res);
       this.setState({
-        cars: res
+        cars: res.data
       })
     })
   }
